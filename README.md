@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Project rd - React Demo
+
+Project aims to demonstrate full-stack web application creation using ReactJS, AWS Lambdas and DynamoDB leveraging Serverless Components on AWS.
+
 ## Available Scripts
 
 In the project directory, you can run:
