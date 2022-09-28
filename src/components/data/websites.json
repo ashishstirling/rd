@@ -1,0 +1,7 @@
+[
+    { "href": "https://google.com/", "target": "_blank", "name": "Google"},
+    { "href": "https://amazon.co.uk/", "target": "_blank", "name": "Amazon"},
+    { "href": "https://news.bbc.co.uk/", "target": "_blank", "name": "BBC"},
+    { "href": "https://aws.amazon.com/", "target": "_blank", "name": "AWS"},
+    { "href": "https://scotsoft.scot/", "target": "_blank", "name": "ScotSoft"}
+]
