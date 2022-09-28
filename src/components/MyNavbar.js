@@ -1,9 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';  
 import {Nav, Navbar, Container} from 'react-bootstrap';
-import Websites from './data/websites.json'
 
 function MyNavbar() {
+
+    const [Websites, setWebsites] = useState([]);
+
+    const loadWebsitesData = async() => {
+        // Query the API Gateway
+        const response = await fetch('https://g23ni0eou8.execute-api.us-east-1.amazonaws.com/websites');
+        let jsonData = await response.json();
+
+        // Assign response data to state variable
+        setWebsites(jsonData);
+    }
+
+    useEffect(() => {
+        // Load websites data from API Gateway
+        loadWebsitesData();
+    }, []);
 
     return (
     <Navbar bg="light" expand="md">  

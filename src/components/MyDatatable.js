@@ -1,8 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {Table} from 'react-bootstrap';
-import Users from './data/users.json'
 
 function MyDatatable() {
+
+    const [Users, setUsers] = useState([]);
+
+    const loadUsersData = async() => {
+        // Query the API Gateway
+        const response = await fetch('https://g23ni0eou8.execute-api.us-east-1.amazonaws.com/users');
+        let jsonData = await response.json();
+
+        // Assign response data to state variable
+        setUsers(jsonData);
+    }
+
+    useEffect(() => {
+        // Load users data from API Gateway
+        loadUsersData();
+    }, []);
 
     return (
         <div className='p-5'>
