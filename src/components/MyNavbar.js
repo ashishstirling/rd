@@ -1,9 +1,13 @@
-import React, { useState, useEffect } from 'react';
+// Please uncomment the comments in order to fetch data from Lambda functions over REST API
+import React/*, { useState, useEffect }*/ from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';  
 import {Nav, Navbar, Container} from 'react-bootstrap';
+// Please comment the following line when fetching data from Lambda functions over REST API
+import Websites from './data/websites.json'
 
 function MyNavbar() {
 
+    /*
     const [Websites, setWebsites] = useState([]);
 
     const loadWebsitesData = async() => {
@@ -19,6 +23,7 @@ function MyNavbar() {
         // Load websites data from API Gateway
         loadWebsitesData();
     }, []);
+    */
 
     return (
     <Navbar bg="light" expand="md">  

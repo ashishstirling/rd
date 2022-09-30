@@ -1,8 +1,12 @@
-import React, { useState, useEffect } from 'react';
+// Please uncomment the comments in order to fetch data from Lambda functions over REST API
+import React/*, { useState, useEffect }*/ from 'react';
 import {Table} from 'react-bootstrap';
+// Please comment the following line when fetching data from Lambda functions over REST API
+import Users from './data/users.json'
 
 function MyDatatable() {
 
+    /*
     const [Users, setUsers] = useState([]);
 
     const loadUsersData = async() => {
@@ -18,6 +22,7 @@ function MyDatatable() {
         // Load users data from API Gateway
         loadUsersData();
     }, []);
+    */
 
     return (
         <div className='p-5'>
